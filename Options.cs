@@ -25,6 +25,10 @@ namespace AddPath
                             Target = EnvironmentVariableTarget.Machine;
                             break;
 
+                        case "-u":
+                            Target = EnvironmentVariableTarget.User;
+                            break;
+
                         default:
                             Console.WriteLine("Unknown option: {0}", arg);
                             return false;
@@ -57,9 +61,10 @@ namespace AddPath
             Console.WriteLine("Usage:");
             Console.WriteLine("    AddPath  [options] [path]");
             Console.WriteLine();
-            Console.WriteLine("    [options] can be zero or more of:");
+            Console.WriteLine("    [options] can be one of:");
             Console.WriteLine("        -p    only change path in process");
             Console.WriteLine("        -m    change path on machine is default");
+            Console.WriteLine("        -u    change path for user only");
             Console.WriteLine();
             Console.WriteLine("    [path] directory you want to add");
         }
