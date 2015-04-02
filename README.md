@@ -13,4 +13,6 @@ AddPath  [options] [path]
 
 -m    change path on machine (default)
 
+-u    change path for user
+
 [path] directory you want to add to the path environment variable
